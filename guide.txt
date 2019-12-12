@@ -1,0 +1,11 @@
+https://stackabuse.com/uploading-files-to-aws-s3-with-node-js/
+
+1) IAM( Identity and Access Management ) => access 키 발급 ( 보안주의 ) ( add user 해야할수도있음 )
+2) S3 bucket 생성 ( like 업로드 폴더 )
+3) node 용 AWS SDK 다운 및 세팅
+  * node.js sdk : https://aws.amazon.com/ko/sdk-for-node-js/
+    => API 설명서( 여기 s3.upload 랑 파라미터 명세 있음 ), 개발자 안내서( 샘플 )
+
+4) 업로드 ( ACL ( access control list ) ) 
+  => 설정 'public-read' 로 해야 읽을수있음
+  => ContentType: "image/jpeg" 해야 octet 으로 안올라감 ( 바로다운 )
